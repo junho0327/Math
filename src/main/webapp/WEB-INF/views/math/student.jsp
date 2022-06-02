@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
 <head>
 
@@ -18,7 +18,7 @@
             rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="resources/static/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -370,11 +370,11 @@
         </div>
 
         <!-- Bootstrap core JavaScript-->
-        <script src="/resources/static/vendor/jquery/jquery.min.js"></script>
-        <script src="/resources/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
         <!-- Core plugin JavaScript-->
-        <script src="/resources/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
         <!-- Custom scripts for all pages-->
         <script src="/js/sb-admin-2.js"></script>
@@ -383,8 +383,8 @@
         <script src="/vendor/chart.js/Chart.min.js"></script>
 
         <!-- Page level custom scripts -->
-        <script src="/resources/static/js/demo/chart-area-demo.js"></script>
-        <script src="/resources/static/js/demo/chart-pie-demo.js"></script>
+        <script src="/js/demo/chart-area-demo.js"></script>
+        <script src="/js/demo/chart-pie-demo.js"></script>
 
 </body>
 </html>
