@@ -60,13 +60,14 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>과제</span>
+                <span>문제 생성</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">과제</h6>
-                    <a class="collapse-item" href="assignment">과제 조회</a>
-                    <a class="collapse-item" href="submit">과제 제출</a>
+                    <h6 class="collapse-header">과제 생성</h6>
+                    <a class="collapse-item" href="question">문제 생성</a>
+                    <a class="collapse-item" href="makehomework">생성된 문제 조회</a>
+                    <a class="collapse-item" href="homework">생성된 과제 베포</a>
                 </div>
             </div>
         </li>
@@ -76,14 +77,30 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>과제 확인</span>
+                <span>과제 통계</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">과제 확인</h6>
-                    <a class="collapse-item" href="result">채점결과 확인</a>
-                </div>s
+                    <h6 class="collapse-header">과제 통계</h6>
+                    <a class="collapse-item" href="all">전체 통계</a>
+                    <a class="collapse-item" href="unit">단원별 통계</a>
+                </div>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities1"
+               aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>시간표</span>
+            </a>
+            <div id="collapseUtilities1" class="collapse" aria-labelledby="headingUtilities"
+                 data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">시간표</h6>
+                    <a class="collapse-item" href="schedule">시간표 등록</a>
+                </div>
             </div>
         </li>
 
@@ -165,6 +182,58 @@
                         </div>
                     </li>
 
+                    <!-- Nav Item - Alerts -->
+                    <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                             aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                Alerts Center
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 12, 2019</div>
+                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 7, 2019</div>
+                                    $290.29 has been deposited into your account!
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="mr-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">December 2, 2019</div>
+                                    Spending Alert: We've noticed unusually high spending for your account.
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                        </div>
+                    </li>
+
+                    <div class="topbar-divider d-none d-sm-block"></div>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
@@ -214,7 +283,7 @@
                         </div>
                         <div class="card-body">
                             <p>OOO님 환영합니다!</p>
-                            <p class="mb-0">△△△ 중학교 OO학년 OO반</p>
+                            <p class="mb-0">△△△ 중학교</p>
                         </div>
                     </div>
                 </div>
@@ -223,22 +292,23 @@
 
                     <div class="card shadow mb-4">
                         <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>오늘의 과제</b></p>
-                            <p class="mb-0">정수와 유리수 1 (~4/5)</p>
-                        </div>
+                            <p style="color:rgb(255,0,0);"><b>오늘의 수업</b></p>
+                            <p class="mb-0"><h4>1-1, 1-4, 1-6</h4></p>
+                            <hr>
 
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>남은 진도</b></p>
-                            <p class="mb-0">정수와 유리수 2</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수 3</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수의 계산 1</p>
-                        </div>
+                            <p>1-1</p>
+                            <p class="mb-0"><b><h5>정수와 유리수 1</h5></b></p>
 
+                            <br></br>
+                            <p>1-4</p>
+                            <p class="mb-0"><b><h5>정수와 유리수 3</h5></b></p>
+                            <br></br>
+
+                            <p>1-6</p>
+                            <p class="mb-0"><b><h5>정수와 유리수의 계산 1</h5></b></p>
+                        </div>
                     </div>
                 </div>
-
                 <!-- End of Main Content -->
 
                 <!-- Footer -->

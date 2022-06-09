@@ -367,36 +367,4 @@ public class NoticeController {
 
         return "/notice/MsgToList";
     }
-
-    @GetMapping(value = "math/student")
-    public String student(ModelMap model)
-            throws Exception {
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".student start!");
-
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".student end!");
-
-        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
-        return "/math/student";
-
-    }
-
-    @GetMapping(value = "math/register")
-    public String register(ModelMap model)
-            throws Exception {
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".register start!");
-
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".register end!");
-
-        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
-        return "/math/register";
-
-    }
 }

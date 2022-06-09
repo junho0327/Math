@@ -60,13 +60,13 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                aria-expanded="true" aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
-                <span>과제</span>
+                <span>문제 생성</span>
             </a>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">과제</h6>
-                    <a class="collapse-item" href="assignment">과제 조회</a>
-                    <a class="collapse-item" href="submit">과제 제출</a>
+                    <h6 class="collapse-header">문제 생성</h6>
+                    <a class="collapse-item" href="makehomework">생성된 문제 조회</a>
+                    <a class="collapse-item" href="homework">생성된 과제 베포</a>
                 </div>
             </div>
         </li>
@@ -76,14 +76,15 @@
             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                aria-expanded="true" aria-controls="collapseUtilities">
                 <i class="fas fa-fw fa-wrench"></i>
-                <span>과제 확인</span>
+                <span>과제 통계</span>
             </a>
             <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                  data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">과제 확인</h6>
-                    <a class="collapse-item" href="result">채점결과 확인</a>
-                </div>s
+                    <h6 class="collapse-header">과제 통계</h6>
+                    <a class="collapse-item" href="all">전체 통계</a>
+                    <a class="collapse-item" href="unit">단원별 통계</a>
+                </div>
             </div>
         </li>
 
@@ -210,32 +211,12 @@
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">회원정보</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">단원별 통계</h6>
                         </div>
                         <div class="card-body">
-                            <p>OOO님 환영합니다!</p>
-                            <p class="mb-0">△△△ 중학교 OO학년 OO반</p>
+                            <p>단원별 통계</p>
+                            <p class="mb-0">chart.js 삽입</p>
                         </div>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>오늘의 과제</b></p>
-                            <p class="mb-0">정수와 유리수 1 (~4/5)</p>
-                        </div>
-
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>남은 진도</b></p>
-                            <p class="mb-0">정수와 유리수 2</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수 3</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수의 계산 1</p>
-                        </div>
-
                     </div>
                 </div>
 

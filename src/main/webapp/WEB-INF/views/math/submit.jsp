@@ -210,32 +210,17 @@
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">회원정보</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">채점 결과</h6>
                         </div>
                         <div class="card-body">
-                            <p>OOO님 환영합니다!</p>
-                            <p class="mb-0">△△△ 중학교 OO학년 OO반</p>
+                            <p>과제 제출</p>
+                            <form name="form1" method="post" enctype="multipart/form-data" action="/ocr/getReadforImageText.do">
+                                <br />
+                                이미지 파일 업로드: &nbsp;&nbsp;&nbsp;<input type="file" name="fileupload" />
+                                <br />
+                                <br />
+                                <input type="submit" value="전송">
                         </div>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>오늘의 과제</b></p>
-                            <p class="mb-0">정수와 유리수 1 (~4/5)</p>
-                        </div>
-
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>남은 진도</b></p>
-                            <p class="mb-0">정수와 유리수 2</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수 3</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수의 계산 1</p>
-                        </div>
-
                     </div>
                 </div>
 

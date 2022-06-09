@@ -206,36 +206,50 @@
             <div class="container-fluid">
 
                 <!-- Content Row -->
-                <div class="row">
+                <div class="container">
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">회원정보</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">시간표 추가</h6>
                         </div>
-                        <div class="card-body">
-                            <p>OOO님 환영합니다!</p>
-                            <p class="mb-0">△△△ 중학교 OO학년 OO반</p>
-                        </div>
-                    </div>
-                </div>
+                        <form>
+                            <div class="form-group">
+                                <br />
+                                <label for="exampleFormControlSelect1">&nbsp; * 요일</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>월요일</option>
+                                    <option>화요일</option>
+                                    <option>수요일</option>
+                                    <option>목요일</option>
+                                    <option>금요일</option>
+                            </select>
+                            </div>
 
-                <div class="row">
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">&nbsp; * 교시</label>
+                                <select class="form-control" id="exampleFormControlSelect2">
+                                    <option>1교시</option>
+                                    <option>2교시</option>
+                                    <option>3교시</option>
+                                    <option>4교시</option>
+                                    <option>5교시</option>
+                                    <option>6교시</option>
+                                    <option>7교시</option>
+                                </select>
+                            </div>
 
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>오늘의 과제</b></p>
-                            <p class="mb-0">정수와 유리수 1 (~4/5)</p>
-                        </div>
-
-                        <div class="card-body">
-                            <p style="color:rgb(255,0,0); size:50px"><b>남은 진도</b></p>
-                            <p class="mb-0">정수와 유리수 2</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수 3</p>
-                            <br>
-                            <p class="mb-0">정수와 유리수의 계산 1</p>
-                        </div>
-
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">&nbsp; * 학년 - 반</label>
+                                <select class="form-control" id="exampleFormControlSelect3">
+                                    <option>1-1</option>
+                                    <option>1-2</option>
+                                    <option>1-3</option>
+                                    <option>1-4</option>
+                                    <option>1-5</option>
+                                </select>
+                            </div>
+                            <p><button type="button" class="btn btn-success btn-block">등록하기</button></p>
+                        </form>
                     </div>
                 </div>
 
