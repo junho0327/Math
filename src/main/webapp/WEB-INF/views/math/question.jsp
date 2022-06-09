@@ -206,21 +206,47 @@
             <div class="container-fluid">
 
                 <!-- Content Row -->
-                <div class="row">
+                <div class="container">
 
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">채점 결과</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">학년</h6>
                         </div>
-                        <div class="card-body">
-                            <p>과제 제출</p>
-                            <form name="form1" method="post" enctype="multipart/form-data" action="/ocr/getReadforImageText.do">
+                        <form>
+                            <div class="form-group">
                                 <br />
-                                이미지 파일 업로드: &nbsp;&nbsp;&nbsp;<input type="file" name="fileupload" />
-                                <br />
-                                <br />
-                                <input type="submit" value="전송">
-                        </div>
+                                <label for="exampleFormControlSelect1">&nbsp; * 학년</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>1학년</option>
+                                    <option>2학년</option>
+                                    <option>3학년</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">&nbsp; * 단원</label>
+                                <select class="form-control" id="exampleFormControlSelect2">
+                                    <option>자연수의 성질</option>
+                                    <option>a</option>
+                                    <option>b</option>
+                                    <option>c</option>
+                                    <option>d</option>
+                                    <option>e</option>
+                                    <option>f</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <select class="form-control" id="exampleFormControlSelect3">
+                                    <option>소인수분해</option>
+                                    <option>a</option>
+                                    <option>b</option>
+                                    <option>c</option>
+                                    <option>d</option>
+                                </select>
+                            </div>
+                            <p><button type="button" class="btn btn-success btn-block">생성하기</button></p>
+                        </form>
                     </div>
                 </div>
 
