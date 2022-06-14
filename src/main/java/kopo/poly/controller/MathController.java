@@ -233,4 +233,20 @@ public class MathController {
         return "/math/timetable";
 
     }
+
+    @RequestMapping(value = "math/question")
+    public String question(ModelMap model)
+            throws Exception {
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".question start!");
+
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".question end!");
+
+        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
+        return "/math/question";
+
+    }
 }
