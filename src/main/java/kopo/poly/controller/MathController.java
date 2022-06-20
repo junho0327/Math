@@ -10,35 +10,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class MathController {
 
-    @GetMapping(value = "math/student")
-    public String student(ModelMap model)
+    @RequestMapping(value = "math/main")
+    public String select(ModelMap model)
             throws Exception {
 
         // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".student start!");
+        log.info(this.getClass().getName() + ".main start!");
 
 
         // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".student end!");
+        log.info(this.getClass().getName() + ".main end!");
 
         // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
-        return "/math/student";
-
-    }
-
-    @RequestMapping(value = "math/teacher")
-    public String teacher(ModelMap model)
-            throws Exception {
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".teacher start!");
-
-
-        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".teacher end!");
-
-        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
-        return "/math/teacher";
+        return "/math/main";
 
     }
 
@@ -74,21 +58,38 @@ public class MathController {
 
     }
 
-    @RequestMapping(value = "math/login")
-    public String login(ModelMap model)
+    @GetMapping(value = "math/student")
+    public String student(ModelMap model)
             throws Exception {
 
         // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".login start!");
+        log.info(this.getClass().getName() + ".student start!");
 
 
         // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
-        log.info(this.getClass().getName() + ".login end!");
+        log.info(this.getClass().getName() + ".student end!");
 
         // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
-        return "/math/login";
+        return "/math/student";
 
     }
+
+    @RequestMapping(value = "math/teacher")
+    public String teacher(ModelMap model)
+            throws Exception {
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".teacher start!");
+
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".teacher end!");
+
+        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
+        return "/math/teacher";
+
+    }
+
 
     @RequestMapping(value = "math/all")
     public String all(ModelMap model)
@@ -249,4 +250,6 @@ public class MathController {
         return "/math/question";
 
     }
+
+
 }

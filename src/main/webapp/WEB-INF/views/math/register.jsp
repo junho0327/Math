@@ -67,6 +67,7 @@
                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                   <label class="form-check-label" for="flexRadioDefault1">
                     학생&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <div name="type1"></div>
                   </label>
                 </div>
                 <div class="form-check">
@@ -75,16 +76,16 @@
                   </label>
                 </div>
               </div>
-              <a href="login.html" class="btn btn-primary btn-user btn-block">
+              <a href="login" class="btn btn-primary btn-user btn-block">
                 회원가입
               </a>
             </form>
             <hr>
             <div class="text-center">
-              <a class="small" href="forgot-password.html">비밀번호를 잊으셨습니까?</a>
+              <a class="small" href="password">비밀번호를 잊으셨습니까?</a>
             </div>
             <div class="text-center">
-              <a class="small" href="login.html">로그인</a>
+              <a class="small" href="login">로그인</a>
             </div>
           </div>
         </div>

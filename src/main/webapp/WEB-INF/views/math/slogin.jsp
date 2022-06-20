@@ -40,6 +40,7 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">로그인</h1>
                                 </div>
+                                <hr />
                                 <form class="user">
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user"
@@ -56,7 +57,7 @@
                                             <label class="custom-control-label" for="customCheck">회원정보 기억</label>
                                         </div>
                                     </div>
-                                    <a href="teacher" class="btn btn-primary btn-user btn-block">
+                                    <a href="student" class="btn btn-primary btn-user btn-block">
                                         로그인
                                     </a>
                                     <hr>
