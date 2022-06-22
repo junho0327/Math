@@ -1,14 +1,14 @@
 package kopo.poly.persistance.mongodb.impl;
 
 
-import kopo.poly.dto.SequenceDTO;
-import kopo.poly.persistance.mongodb.AbstractMongoDBComon;
-import kopo.poly.persistance.mongodb.ISequenceMapper;
-import kopo.poly.util.CmmUtil;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.FindOneAndUpdateOptions;
+import kopo.poly.dto.SequenceDTO;
+import kopo.poly.persistance.mongodb.AbstractMongoDBComon;
+import kopo.poly.persistance.mongodb.ISequenceMapper;
+import kopo.poly.util.CmmUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.Document;
 import org.springframework.stereotype.Component;
@@ -34,6 +34,11 @@ public class SequenceMapper extends AbstractMongoDBComon implements ISequenceMap
 
         // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
         log.info(this.getClass().getName() + ".getSequence Start!");
+
+        // 컬렉션이 없다면 생성하기
+        if(!mongodb.collectionExists("Sequence")) {
+            super.createCollection("Sequence");
+        }
 
         // 조회 결과를 전달하기 위한 객체 생성하기
         SequenceDTO rDTO = new SequenceDTO();

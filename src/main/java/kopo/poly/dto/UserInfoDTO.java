@@ -2,8 +2,6 @@ package kopo.poly.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * 사용자 정보 DTO
@@ -18,19 +16,18 @@ import lombok.Setter;
  */
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 @Data
-@Getter
-@Setter
 public class UserInfoDTO {
 
-    String user_seq; // 사용자 번호
-    String user_id; // 아이디
+    String user_id; // 아이디(학생,선생님 번호)
     String user_pw; // 비밀번호
-    String user_auth; // 권한
     String email; // 이메일
     String reg_id; // 수정자
     String reg_dt; // 수정일
     String chg_id; // 최근 수정자
     String chg_dt; // 최근 수정일
+    String user_auth; // 권한
+    String user_seq; // 시퀀스
+
 
     // 회원 가입 시, 중복가입을 방지를 위해 사용할 변수
     // DB를 조회해서 회원이 존재하면 Y값을 반환함.

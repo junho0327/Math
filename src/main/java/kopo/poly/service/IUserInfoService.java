@@ -24,4 +24,14 @@ public interface IUserInfoService {
      */
     int getUserLoginCheck(UserInfoDTO pDTO, String colNm) throws Exception;
 
+    /**
+     * 로그인 체크하기
+     *
+     * @param pDTO  로그인 할 정보
+     * @param colNm 참조할 컬렉션 이름
+     * @return 로그인 성공 여부
+     * @throws Exception
+     */
+    UserInfoDTO getUserInfo(UserInfoDTO pDTO, String colNm) throws Exception;
+
 }

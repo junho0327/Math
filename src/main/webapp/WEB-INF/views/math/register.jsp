@@ -47,38 +47,37 @@
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                   <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                         placeholder="학교코드(학번)">
+                         name="user_id" placeholder="학교코드(학번)">
                 </div>
               </div>
               <div class="form-group">
                 <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                       placeholder="이메일">
+                       name="email" placeholder="이메일">
               </div>
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                   <input type="password" class="form-control form-control-user"
-                         id="exampleInputPassword" placeholder="비밀번호">
+                         id="exampleInputPassword" name="user_pw" placeholder="비밀번호">
                 </div>
                 <div class="col-sm-6">
                   <input type="password" class="form-control form-control-user"
-                         id="exampleRepeatPassword" placeholder="비밀번호 확인">
+                         id="exampleRepeatPassword" name="user_pw" placeholder="비밀번호 확인">
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    학생&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                    <div name="type1"></div>
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value='student'checked>
+                  <label class="form-check-label" for="flexRadioDefault1"> 학생
                   </label>
                 </div>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value='teacher'>
                   <label class="form-check-label" for="flexRadioDefault2"> 선생님
                   </label>
                 </div>
               </div>
-              <a href="main" class="btn btn-primary btn-user btn-block">
+              <button type="submit" class="btn btn-primary btn-user btn-block">
                 회원가입
-              </a>
+              </button>
             </form>
             <hr>
             <div class="text-center">

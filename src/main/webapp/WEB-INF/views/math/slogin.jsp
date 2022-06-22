@@ -19,6 +19,30 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <!-- login script Start -->
+    <script type="text/javascript">
+
+        //로그인을 위한 입력정보의 유효성 체크하기
+        function doLoginUserCheck(f) {
+
+            if (f.user_id.value == "") {
+                alert("아이디를 입력하세요.");
+                f.user_id.focus();
+                return false;
+            }
+
+            if (f.user_pw.value == "") {
+                alert("비밀번호를 입력하세요.");
+                f.user_pw.focus();
+                return false;
+            }
+
+            f.submit();
+        }
+
+    </script>
+    <!-- login script End -->
+
 </head>
 
 <body class="bg-gradient-primary">
@@ -41,15 +65,15 @@
                                     <h1 class="h4 text-gray-900 mb-4">로그인</h1>
                                 </div>
                                 <hr />
-                                <form class="user">
+                                <form class="user" name="f" method="post" action="/user/getUserLoginCheck" onsubmit="return doLoginUserCheck(this);">
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user"
+                                        <input type="text" class="form-control form-control-user"
                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="학교코드(학번)">
+                                               name="user_id" placeholder="학교코드(학번)">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="비밀번호">
+                                               id="exampleInputPassword" name="user_pw" placeholder="비밀번호">
                                     </div>
                                     <div class="form-group">
                                         <div class="custom-control custom-checkbox small">
@@ -57,9 +81,9 @@
                                             <label class="custom-control-label" for="customCheck">회원정보 기억</label>
                                         </div>
                                     </div>
-                                    <a href="student" class="btn btn-primary btn-user btn-block">
+                                    <button type="submit" href="#" onclick="doLoginUserCheck(f)" class="btn btn-primary btn-user btn-block">
                                         로그인
-                                    </a>
+                                    </button>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="password">비밀번호 변경</a>
@@ -67,6 +91,7 @@
                                     <div class="text-center">
                                         <a class="small" href="register">회원가입</a>
                                     </div>
+                                </form>
                             </div>
                         </div>
                     </div>

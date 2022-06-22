@@ -251,5 +251,37 @@ public class MathController {
 
     }
 
+    @RequestMapping(value = "math/slogin")
+    public String slogin(ModelMap model)
+            throws Exception {
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".slogin start!");
+
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".slogin end!");
+
+        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
+        return "/math/slogin";
+
+    }
+
+    @RequestMapping(value = "math/tlogin")
+    public String tlogin(ModelMap model)
+            throws Exception {
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".tlogin start!");
+
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수 호출이 끝났는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".tlogin end!");
+
+        // 함수 처리가 끝나고 보여줄 JSP 파일명(/WEB-INF/view/notice/NoticeList.jsp)
+        return "/math/tlogin";
+
+    }
+
 
 }

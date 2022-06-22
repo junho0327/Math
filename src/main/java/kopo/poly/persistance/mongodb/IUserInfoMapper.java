@@ -34,4 +34,13 @@ public interface IUserInfoMapper {
      */
     UserInfoDTO getUserLoginCheck(UserInfoDTO pDTO, String colNm) throws Exception;
 
+    /**
+     * 로그인을 위해 아이디와 비밀번호가 일치하는지 확인하기
+     *
+     * @param pDTO 입력한 정보
+     * @param colNm 조회할 컬렉션 이름
+     * @return 조회한 값 반환
+     * @throws Exception
+     */
+    UserInfoDTO getUserInfo(UserInfoDTO pDTO, String colNm) throws Exception;
 }

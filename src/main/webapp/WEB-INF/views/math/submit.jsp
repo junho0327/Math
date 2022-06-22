@@ -42,7 +42,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="teacher">
+            <a class="nav-link" href="student">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>MAIN</span></a>
         </li>
@@ -83,7 +83,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">과제 확인</h6>
                     <a class="collapse-item" href="result">채점결과 확인</a>
-                </div>s
+                </div>
             </div>
         </li>
 
@@ -105,7 +105,7 @@
             <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">설정</h6>
-                    <a class="collapse-item" href="login">로그아웃</a>
+                    <a class="collapse-item" href="main">로그아웃</a>
                     <a class="collapse-item" href="register">회원가입</a>
                     <a class="collapse-item" href="password">비밀번호 변경</a>
                 </div>

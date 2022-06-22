@@ -42,7 +42,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="teacher">
+            <a class="nav-link" href="student">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>MAIN</span></a>
         </li>

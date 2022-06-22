@@ -41,8 +41,6 @@ public class UserInfoService implements IUserInfoService {
         // 회원가입 성공 : 1, 아이디 중복으로인한 가입 취소 : 2, 기타 에러 발생 : 0
         int res = 0;
 
-        // 권한 넣기
-        pDTO.setUser_auth("user");
 
         // 수정자 넣기
         pDTO.setReg_id(pDTO.getUser_id());
@@ -75,6 +73,7 @@ public class UserInfoService implements IUserInfoService {
 
             // 문제 없으면 시퀸스 증가와 함께 넣기
             // 시퀸스 값 넣기
+
             pDTO.setUser_seq(sequenceMapper.getSequence(colNm).getSeq_nl());
 
             // 회원가입
@@ -140,7 +139,7 @@ public class UserInfoService implements IUserInfoService {
         int res = 0;
 
         // 로그인을 위해 아이디와 비밀번호가 일치하는지 확인하기 위한 mapper 호출하기
-        UserInfoDTO rDTO = userInfoMapper.getUserExists(pDTO, colNm);
+        UserInfoDTO rDTO = userInfoMapper.getUserLoginCheck(pDTO, colNm);
 
         if (rDTO == null) {
             rDTO = new UserInfoDTO();
@@ -149,7 +148,7 @@ public class UserInfoService implements IUserInfoService {
 
         /*
          * #######################################################
-         *        				로그인 성공 여부 체크 시작!!
+         *                    로그인 성공 여부 체크 시작!!
          * #######################################################
          */
 
@@ -165,7 +164,7 @@ public class UserInfoService implements IUserInfoService {
 
             /*
              * #######################################################
-             *        				메일 발송 로직 추가 시작!!
+             *                    메일 발송 로직 추가 시작!!
              * #######################################################
              */
 
@@ -184,7 +183,7 @@ public class UserInfoService implements IUserInfoService {
 
             /*
              * #######################################################
-             *        				메일 발송 로직 추가 끝!!
+             *                    메일 발송 로직 추가 끝!!
              * #######################################################
              */
 
@@ -193,7 +192,7 @@ public class UserInfoService implements IUserInfoService {
 
         /*
          * #######################################################
-         *        				로그인 성공 여부 체크 끝!!
+         *                    로그인 성공 여부 체크 끝!!
          * #######################################################
          */
 
@@ -201,6 +200,21 @@ public class UserInfoService implements IUserInfoService {
         log.info(this.getClass().getName() + ".getUserLoginCheck End!");
 
         return res;
+    }
+
+
+    @Override
+    public UserInfoDTO getUserInfo(UserInfoDTO pDTO, String colNm) throws Exception {
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".getUserInfo Start!");
+
+        UserInfoDTO rDTO = userInfoMapper.getUserInfo(pDTO, colNm);
+
+        // 로그 찍기(추후 찍은 로그를 통해 이 함수에 접근했는지 파악하기 용이하다.)
+        log.info(this.getClass().getName() + ".getUserInfo Start!");
+
+        return rDTO;
     }
 
 }
